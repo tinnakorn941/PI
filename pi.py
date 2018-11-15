@@ -103,7 +103,7 @@ settings = {
     "man1":"ตั้งข้อความ",
     "man2":"ตั้งข้อความ",
     "man3":"ตั้งข้อความ",
-    "message":"บัญชีนี้ได้การป้องกันโดย Ŧ€₳M↬฿❂Ŧ↬ȾɆ₦₮Ɑ₡ŁɆ🇹🇭  ระบบได้ทำการบล็อคคุณอัตโนมัติ\nติดต่อเชลบอทรึบอทวี10คอมเม้นในโพสเลยคับ",
+    "message":"บัญชีนี้ได้การป้องกันโดย ✍☆బี่ໂऩ🔥✿¨ﾟ✎･  ระบบได้ทำการบล็อคคุณอัตโนมัติ\nติดต่อเชลบอทรึบอทวี10คอมเม้นในโพสเลยคับ",
     "comment":"Thanks for add me",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -320,7 +320,7 @@ def socmedia():
 def helpset():
     helpSet = """〘คำสั่งเชล〙
 🌪คท
-🌪มิด
+🌪ไอดี
 🌪ชื่อ
 🌪ตัส
 🌪ดิส
@@ -716,11 +716,11 @@ def lineBot(op):
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    line.sendMessage(to, "〘Ŧ€₳M↬฿❂Ŧ↬ȾɆ₦₮Ɑ₡ŁɆ 🇹🇭 〙\n""ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
+                    line.sendMessage(to, "〘✍☆బี่ໂऩ🔥✿¨ﾟ✎･〙\n""ระยะเวลาการทำงานของบอท {}".format(str(runtime)))
                 elif text.lower() == 'บอท':
                     try:
                         arr = []
-                        owner = "ufb6d6e2e1849c403d55f4ba3071985a2"
+                        owner = "u188a6636bea91aba0303d1866408f083"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
@@ -881,8 +881,8 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'ผส':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "uufb6d6e2e1849c403d55f4ba3071985a2")
-                elif text.lower() == 'มิด':
+                    line.sendContact(to, "u188a6636bea91aba0303d1866408f083")
+                elif text.lower() == 'ไอดี':
                     line.sendMessage(msg.to,"[MID]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
                     me = line.getContact(lineMID)
@@ -913,7 +913,7 @@ def lineBot(op):
                             contact = line.getContact(ls)
                             mi_d = contact.mid
                             line.sendContact(msg.to, mi_d)
-                elif msg.text.lower().startswith("มิด "):
+                elif msg.text.lower().startswith("ไอดี "):
                     if 'MENTION' in list(msg.contentMetadata.keys())!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -922,7 +922,7 @@ def lineBot(op):
                         for mention in mentionees:
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
-                        ret_ = "[ มิด ]"
+                        ret_ = "[ ไอดี ]"
                         for ls in lists:
                             ret_ += "\n{}" + ls
                         line.sendMessage(msg.to, str(ret_))
